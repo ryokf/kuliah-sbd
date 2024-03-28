@@ -1,3 +1,4 @@
+-- Active: 1710421641471@@127.0.0.1@3306
 --* 1. Tambahkan record berikut kedalam tabel mhs :
 insert into
     mhs (
@@ -18,6 +19,10 @@ select * from mhs;
 
 --* 3. Tampilkan nama mahasiswa yang sex = ‘P’
 select nama from mhs where sex = 'p';
+
+--* 4. Tampilkan nama dan alamat mahasiswa yang nim antara A21.2001.00001 s.d A21.2001.00100’
+select nama, alamat from mhs where nim between 'A21.2001.00001' and 'A21.2001.00100';
+
 
 --* 5. Tampilkan nama mahasiswa yang nama depannya adalah ‘Sari’
 select nama, alamat from mhs where nama like 'sari%';
@@ -56,3 +61,6 @@ where
 
 --* 11. Hapuslah record mahasiswa yang sex = ‘P’ atau agamanya = ‘3’
 delete from mhs where sex = 'p' or agama = '3';
+
+--* 12. Hapuslah record-record mahasiswa yang nimnya anatara A21.2001.00100 s.d A21.2001.00300’
+delete from mhs where nim between 'A21.2001.00100' and 'A21.2001.00300';

@@ -1,11 +1,4 @@
--- Active: 1710421641471@@127.0.0.1@3306@kuliah
-show tables;
-
-drop table mhs;
-
-desc mhs;
-
--- 1. Buatlah sebuah tabel dengan nama mhs dengan struktur tabel sebagai berikut :
+--* 1. Buatlah sebuah tabel dengan nama mhs dengan struktur tabel sebagai berikut :
 create table
     mhs (
         nim char(14) not null unique primary key,
@@ -16,17 +9,17 @@ create table
     );
     
 alter table mhs
--- 2. Tambahkan field alamat varchar(30) yang diletakkan setelah field nama
+--* 2. Tambahkan field alamat varchar(30) yang diletakkan setelah field nama
 add column alamat varchar(30) after nama,
--- 3. Tambahkan field kota char(20) yang diletakkan setelah field alamat
+--* 3. Tambahkan field kota char(20) yang diletakkan setelah field alamat
 add column kota char(20) after alamat;
 
--- 4. Gantilah nama field kelamin menjadi sex (tipe datanya masih tetap)
+--* 4. Gantilah nama field kelamin menjadi sex (tipe datanya masih tetap)
 alter table mhs
 drop check mhs_chk_1,
 change column kelamin sex CHAR(1);
 
--- 5. Masukan record-record berikut :
+--* 5. Masukan record-record berikut :
 insert into
     mhs (nim, nama, alamat, kota, sex, agama, tgl_lhr)
 values
