@@ -1,6 +1,9 @@
+-- Active: 1710421641471@@127.0.0.1@3306
 show databases;
 
 create database Latihan_2;
+
+use Latihan_2;
 
 create table kategori(
     id_kategori char(3) not null primary key,
@@ -36,3 +39,7 @@ insert into produk(id_produk, id_kategori, merk) values
     ;
 
 select * from produk inner join kategori on produk.id_kategori = kategori.id_kategori;
+
+select * from produk left join kategori on produk.id_kategori = kategori.id_kategori;
+
+select * from produk right join kategori on produk.id_kategori = kategori.id_kategori;
