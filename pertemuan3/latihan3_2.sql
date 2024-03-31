@@ -1,4 +1,3 @@
--- Active: 1710421641471@@127.0.0.1@3306
 --* 1. Tambahkan record berikut kedalam tabel mhs :
 insert into
     mhs (
@@ -51,7 +50,8 @@ set
 where
     nim = "A21.2001.00003";
 
---* 10. Gantilah alamat dan tanggal lahir mahasiswa  yang nimnya ‘A21.2001.00002’ menjadi ‘Sari Wijayanti’, ’1977-10-17’
+--* 10. Gantilah alamat dan tanggal lahir mahasiswa  yang nimnya ‘A21.2001.00002’ menjadi 
+--* ‘Sari Wijayanti’, ’1977-10-17’
 update mhs
 set
     nama = "Sari Wijayanti",
